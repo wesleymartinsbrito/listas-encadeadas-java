@@ -1,18 +1,20 @@
-## Getting Started
+## Listas Encadeadas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Estrutura dinâmica, cada element é um nó (célula), guarda a referência do primeiro elemento, cada nó faz referência ao próximo elemento.
 
-## Folder Structure
+Estrutura estática (arrays, fila e pilhas): era necessário dizer quantos elementos a estrutura teria.
 
-The workspace contains two folders by default, where:
+Estrutura dinâmica: você reserva memória no início, vai dependendo da inserção de elementos.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+ Adicionar um elemento no final da lista:
+ - Você deve pegar o elemento anterior que tem e apontar o próximo elemento. Início.proximo = novo Nó.
+-  para adicionar 3 ou mais elementos é necessário referenciar o primeiro elemento e o anterior.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Percorrer a lista:
+- Vamos utilizar uma referência chamada de ponteiro que vai receber o valor inicial da lista.
+- Enquanto o valor o próximo for diferente de nulo, o ponteiro será movido para o próximo item da lista.
+	- atual.proximo != null { atual = atual.proximo; }
+- Você deve modificar o método toString.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Limpar a lista:
+- Você pode setar o valor inicial, o próximo e o tamanho como 0.
